@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="530.0" prefWidth="740.0" style="-fx-background-color: #71d09e;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pos.deleteControl">
+   <children>
+      <AnchorPane layoutX="70.0" layoutY="50.0" prefHeight="354.0" prefWidth="453.0" style="-fx-background-color: ffffff;" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="50.0">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <children>
+            <TableView fx:id="table" layoutY="105.0" onMouseReleased="#released" prefHeight="254.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+              <columns>
+                <TableColumn fx:id="colNum" prefWidth="86.0" text="상품번호" />
+                <TableColumn fx:id="colName" prefWidth="189.0" text="상품이름" />
+                  <TableColumn fx:id="colKind" prefWidth="171.0" text="상품종류" />
+                  <TableColumn fx:id="colPrice" prefWidth="153.0" text="상품가격" />
+              </columns>
+            </TableView>
+            <JFXButton fx:id="btnRevise" layoutX="150.0" layoutY="377.0" onAction="#revise" prefHeight="29.0" prefWidth="87.0" style="-fx-background-color: #778899;" text="REVISE" textFill="WHITE" />
+            <JFXButton fx:id="btnSelectAll" layoutX="371.0" layoutY="377.0" onAction="#selectAll" prefHeight="29.0" prefWidth="87.0" style="-fx-background-color: #778899;" text="SELECTALL" textFill="WHITE" />
+            <JFXButton fx:id="btnDelete" layoutX="257.0" layoutY="377.0" onAction="#delete" prefHeight="29.0" prefWidth="87.0" style="-fx-background-color: #778899;" text="DELETE" textFill="WHITE" />
+            <JFXButton fx:id="btnBack" layoutX="486.0" layoutY="377.0" onAction="#back" prefHeight="29.0" prefWidth="87.0" style="-fx-background-color: #778899;" text="BACK" textFill="WHITE" />
+            <JFXTextField fx:id="txtProductName" layoutX="99.0" layoutY="44.0" prefHeight="23.0" prefWidth="115.0" promptText="Productname" />
+            <JFXButton fx:id="btnNameSelect" layoutX="233.0" layoutY="46.0" onAction="#nameSelect" prefHeight="23.0" prefWidth="61.0" style="-fx-background-color: #778899;" text="SELECT" textFill="WHITE" />
+            <JFXTextField fx:id="txtPrice" layoutX="464.0" layoutY="44.0" prefHeight="23.0" prefWidth="115.0" promptText="Price" />
+            <JFXTextField fx:id="txtNum" layoutX="13.0" layoutY="44.0" prefHeight="23.0" prefWidth="74.0" promptText="Num" />
+            <JFXTextField fx:id="txtKind" layoutX="330.0" layoutY="46.0" prefHeight="23.0" prefWidth="115.0" promptText="Kind" />
+         </children>
+         <effect>
+            <InnerShadow choke="0.13" height="7.54" radius="5.0925" width="14.83" />
+         </effect>
+      </AnchorPane>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="270.0" layoutY="-67.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="660.0" prefWidth="1020.0" style="-fx-background-color: #71d09e;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pos.Logincontrol">
+   <children>
+      <AnchorPane layoutX="248.0" layoutY="67.0" prefHeight="504.0" prefWidth="547.0" style="-fx-background-color: ffffff;" AnchorPane.bottomAnchor="89.0" AnchorPane.leftAnchor="248.0" AnchorPane.rightAnchor="225.0" AnchorPane.topAnchor="67.0">
+         <children>
+            <JFXTextField fx:id="txtUserName" layoutX="182.0" layoutY="185.0" prefHeight="28.0" prefWidth="241.0" promptText="UserName">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <focusColor>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </focusColor>
+            </JFXTextField>
+            <JFXPasswordField fx:id="txtPassword" layoutX="182.0" layoutY="265.0" onAction="#enterLogin" prefHeight="28.0" prefWidth="241.0" promptText="Password">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <focusColor>
+                  <LinearGradient endX="1.0" endY="1.0" startX="0.47619047619047616">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </focusColor>
+            </JFXPasswordField>
+            <ImageView fx:id="imgview1" fitHeight="83.0" fitWidth="104.0" layoutX="232.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/img/User-Role-Guest-icon.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgview2" fitHeight="40.0" fitWidth="48.0" layoutX="107.0" layoutY="177.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/img/29649896-web-letter-icon.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgview3" fitHeight="40.0" fitWidth="40.0" layoutX="107.0" layoutY="257.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/img/47450518-lock-icon.jpg" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="btnLogIn" layoutX="89.0" layoutY="344.0" onAction="#login" prefHeight="28.0" prefWidth="371.0" style="-fx-background-color: #cedcf9;" text="Log-in" textFill="#fff3f3">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnClose" layoutX="88.0" layoutY="388.0" onAction="#close" prefHeight="28.0" prefWidth="371.0" style="-fx-background-color: #cedcf9;" text="Close" textFill="#fff3f3">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <Label fx:id="lblError" layoutX="162.0" layoutY="313.0" prefHeight="18.0" prefWidth="224.0" text="Please insert your name" textFill="#ee1313">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <DropShadow height="26.93" radius="15.1875" width="35.82" />
+         </effect>
+      </AnchorPane>
+   </children>
+   <effect>
+      <DropShadow height="47.69" radius="26.31" spread="0.12" width="59.55" />
+   </effect>
+</AnchorPane>

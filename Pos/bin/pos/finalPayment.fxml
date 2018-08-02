@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="660.0" prefWidth="889.0" style="-fx-background-color: ffffff; -fx-border-color: #708090;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pos.FinalPaymentControl">
+   <children>
+      <AnchorPane layoutY="-1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="91.0" prefWidth="655.0" style="-fx-background-color: #708090;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label layoutX="369.0" layoutY="17.0" prefHeight="57.0" prefWidth="150.0" text="결제창" textFill="WHITE">
+               <font>
+                  <Font size="48.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <HBox layoutX="353.0" layoutY="527.0" prefHeight="132.0" prefWidth="305.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="132.0" prefWidth="105.0" style="-fx-background-color: #708090;" text="결제금액" textFill="WHITE">
+               <effect>
+                  <InnerShadow />
+               </effect>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblFinalPayment" alignment="CENTER_RIGHT" prefHeight="132.0" prefWidth="134.0" text="0" textAlignment="RIGHT">
+               <font>
+                  <Font size="35.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="141.0" prefWidth="59.0" text="원">
+               <font>
+                  <Font size="37.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <JFXButton fx:id="btnJoin" layoutX="270.0" layoutY="527.0" onAction="#Join" prefHeight="132.0" prefWidth="95.0" style="-fx-background-color: #708090;" text="회원가입" textFill="WHITE">
+         <effect>
+            <InnerShadow choke="0.16" />
+         </effect>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnClose" layoutX="474.0" layoutY="525.0" onAction="#close" prefHeight="132.0" prefWidth="95.0" style="-fx-background-color: #708090;" text="취소" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="310.0">
+         <effect>
+            <InnerShadow choke="0.16" />
+         </effect>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnFinal" layoutX="377.0" layoutY="527.0" onAction="#finalpayment" prefHeight="132.0" prefWidth="95.0" style="-fx-background-color: #708090;" text="결제완료" textFill="WHITE">
+         <effect>
+            <InnerShadow choke="0.16" />
+         </effect>
+      </JFXButton>
+      <AnchorPane layoutX="354.0" layoutY="93.0" prefHeight="132.0" prefWidth="296.0" style="-fx-border-color: #708090;" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="90.0">
+         <children>
+            <Label layoutX="76.0" layoutY="14.0" text=" 님의 사용가능한 포인트 입니다.">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblPoint" layoutX="31.0" layoutY="66.0" prefHeight="28.0" prefWidth="138.0" text="0000" textAlignment="RIGHT">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="178.0" layoutY="72.0" text="Point">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblName" layoutX="18.0" layoutY="10.0" prefHeight="21.0" prefWidth="59.0" text="">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="7.0" layoutY="92.0" prefHeight="433.0" prefWidth="573.0" style="-fx-border-color: #708090;" AnchorPane.leftAnchor="6.0" AnchorPane.topAnchor="91.0">
+         <children>
+            <Label layoutX="227.0" layoutY="14.0" text="고 객 정 보">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtUserName" alignment="CENTER" layoutX="47.0" layoutY="63.0" promptText="Username" />
+            <JFXTextField fx:id="txtPhone" alignment="CENTER" layoutX="346.0" layoutY="63.0" promptText="Phone" />
+            <JFXButton fx:id="btnNumSelect" layoutX="481.0" layoutY="63.0" onAction="#numselect" style="-fx-background-color: #708090;" text="select" textFill="WHITE" />
+            <JFXButton fx:id="btnNameSelect" layoutX="187.0" layoutY="63.0" onAction="#nameselect" style="-fx-background-color: #708090;" text="select" textFill="WHITE" />
+            <TableView fx:id="tableMember" layoutX="1.0" layoutY="105.0" prefHeight="326.0" prefWidth="573.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="110.0">
+              <columns>
+                <TableColumn fx:id="colMemNo" prefWidth="75.0" text="고객번호" />
+                <TableColumn fx:id="colMemName" prefWidth="157.0" text="고객이름" />
+                  <TableColumn fx:id="colPhone" prefWidth="163.0" text="전화번호" />
+                  <TableColumn fx:id="colPoint" prefWidth="175.0" text="마일리지" />
+              </columns>
+            </TableView>
+            <JFXButton fx:id="btnConn" layoutX="487.0" layoutY="389.0" onAction="#conn" prefHeight="30.0" prefWidth="69.0" style="-fx-background-color: #708090;" text="적용" textFill="WHITE" />
+         </children>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </AnchorPane>
+      <AnchorPane layoutX="354.0" layoutY="230.0" prefHeight="294.0" prefWidth="296.0" style="-fx-border-color: #708090;" AnchorPane.rightAnchor="5.0">
+         <children>
+            <TextField fx:id="txtusePoint" layoutX="36.0" layoutY="147.0" prefHeight="28.0" prefWidth="138.0" promptText="How many use Point?" text="0" />
+            <JFXButton fx:id="btnUsePoint" layoutX="196.0" layoutY="150.0" onAction="#usePoint" prefHeight="23.0" prefWidth="50.0" style="-fx-background-color: #708090;" text="Use" />
+            <Label fx:id="lblCurrentAmount" layoutX="36.0" layoutY="91.0" prefHeight="30.0" prefWidth="150.0" text="Current Amount" textAlignment="RIGHT">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="196.0" layoutY="91.0" prefHeight="15.0" prefWidth="50.0" text="원">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+   <effect>
+      <DropShadow height="157.4" radius="81.16499999999999" spread="0.3" width="169.26" />
+   </effect>
+</AnchorPane>

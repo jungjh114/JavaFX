@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="660.0" prefWidth="650.0" style="-fx-border-color: #708090;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pos.SaleImformationControl">
+   <children>
+      <AnchorPane layoutX="-1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="660.0" prefWidth="655.0" style="-fx-background-color: ffffff; -fx-border-color: #708090;" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0">
+         <children>
+            <AnchorPane layoutY="-1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="90.0" prefWidth="655.0" style="-fx-background-color: #708090;">
+               <children>
+                  <Label layoutX="255.0" layoutY="23.0" prefHeight="44.0" prefWidth="146.0" text="판매현황" textFill="WHITE">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <TableView fx:id="tableSale" layoutX="4.0" layoutY="157.0" prefHeight="407.0" prefWidth="647.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+              <columns>
+                <TableColumn fx:id="colSaleno" prefWidth="75.0" text="판매 NO" />
+                <TableColumn fx:id="colMemberno" prefWidth="75.0" text="고객 NO" />
+                  <TableColumn fx:id="colGoodsno" prefWidth="82.0" text="상품NO" />
+                  <TableColumn fx:id="colSalequa" prefWidth="75.0" text="수량" />
+                  <TableColumn fx:id="colSalprice" prefWidth="119.0" text="판매가격" />
+                  <TableColumn fx:id="colSaledate" prefWidth="226.0" text="구매기간" />
+              </columns>
+            </TableView>
+            <JFXButton fx:id="btnNameSelect" layoutX="145.0" layoutY="117.0" onAction="#nameSelect" prefHeight="23.0" prefWidth="48.0" style="-fx-background-color: #708090;" text="검색">
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </JFXButton>
+            <JFXTextField fx:id="txtName" focusColor="BLACK" layoutX="15.0" layoutY="107.0" prefHeight="33.0" prefWidth="120.0" promptText="UserName" unFocusColor="BLACK">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </JFXTextField>
+            <DatePicker fx:id="firstDate" layoutX="313.0" layoutY="117.0" prefHeight="23.0" prefWidth="120.0" />
+            <Label alignment="CENTER" layoutX="240.0" layoutY="120.0" prefHeight="18.0" prefWidth="73.0" text="구매날짜:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="endDate" layoutX="466.0" layoutY="117.0" prefHeight="23.0" prefWidth="120.0" />
+            <Label layoutX="443.0" layoutY="115.0" text="~">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btnClose" layoutX="475.0" layoutY="571.0" onAction="#close" prefHeight="76.0" prefWidth="161.0" style="-fx-background-color: #708090;" text="나가기" textFill="WHITE">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnDateSelect" layoutX="593.0" layoutY="117.0" onAction="#dateSelect" prefHeight="23.0" prefWidth="48.0" style="-fx-background-color: #708090;" text="검색">
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </JFXButton>
+            <JFXButton fx:id="btnAll" layoutX="305.0" layoutY="571.0" onAction="#all" prefHeight="76.0" prefWidth="161.0" style="-fx-background-color: #708090;" text="전체목록" textFill="WHITE">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </JFXButton>
+         </children>
+         <effect>
+            <DropShadow height="157.4" radius="81.16499999999999" spread="0.3" width="169.26" />
+         </effect>
+      </AnchorPane>
+   </children>
+</AnchorPane>

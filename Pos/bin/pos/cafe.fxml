@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<SplitPane dividerPositions="0.4782608695652174" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="660.0" prefWidth="1020.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pos.CafeControl">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="658.0" prefWidth="467.0">
+         <children>
+            <VBox layoutX="15.0" layoutY="9.0" prefHeight="382.0" prefWidth="295.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <TableView fx:id="table" prefHeight="429.0" prefWidth="488.0">
+                    <columns>
+                      <TableColumn fx:id="colName" prefWidth="171.0" text="품목" />
+                      <TableColumn fx:id="colPrice" prefWidth="90.0" text="가격" />
+                        <TableColumn fx:id="colQua" prefWidth="74.0" text="EA" />
+                        <TableColumn fx:id="colSumPrice" prefWidth="152.0" text="합계" />
+                    </columns>
+                  </TableView>
+                  <HBox prefHeight="250.0" prefWidth="488.0">
+                     <children>
+                        <VBox prefHeight="250.0" prefWidth="266.0">
+                           <children>
+                              <HBox prefHeight="80.0" prefWidth="261.0">
+                                 <children>
+                                    <Button fx:id="btnSelect" mnemonicParsing="false" onAction="#select" prefHeight="80.0" prefWidth="130.0" text="지정취소">
+                                       <HBox.margin>
+                                          <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                       </HBox.margin>
+                                       <effect>
+                                          <InnerShadow />
+                                       </effect>
+                                    </Button>
+                                    <Button fx:id="btnSelectAll" mnemonicParsing="false" onAction="#selectAll" prefHeight="80.0" prefWidth="130.0" text="전체취소">
+                                       <HBox.margin>
+                                          <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                       </HBox.margin>
+                                       <effect>
+                                          <InnerShadow />
+                                       </effect>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="166.0" prefWidth="261.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="165.0" prefWidth="104.0" style="-fx-background-color: #708090;" text="결제금액" textFill="WHITE">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                       </HBox.margin>
+                                       <effect>
+                                          <InnerShadow />
+                                       </effect>
+                                    </Label>
+                                    <Label fx:id="lblPrice" alignment="CENTER_RIGHT" prefHeight="168.0" prefWidth="119.0" text="0">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" prefHeight="164.0" prefWidth="31.0" text="원">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="240.0" prefWidth="80.0">
+                           <children>
+                              <Button fx:id="btnNumber7" mnemonicParsing="false" onAction="#number7" prefHeight="62.5" prefWidth="80.0" style="-fx-background-color: #708090; -fx-background-radius: 10;" text="7" textFill="WHITE">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </padding>
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect>
+                              </Button>
+                              <Button fx:id="btnNumber4" mnemonicParsing="false" onAction="#number4" prefHeight="62.5" prefWidth="80.0" style="-fx-background-color: #708090; -fx-background-radius: 10;" text="4" textFill="WHITE">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </padding>
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect>
+                              </Button>
+                              <Button fx:id="btnNumber1" mnemonicParsing="false" onAction="#number1" prefHeight="62.5" prefWidth="80.0" style="-fx-background-color: #708090; -fx-background-radius: 10;" text="1" textFill="WHITE">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </padding>
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect>
+                              </Button>
+                              <Button fx:id="btnNumber0" mnemonicParsing="false" onAction="#number0" prefHeight="62.5" prefWidth="80.0" style="-fx-background-color: #708090; -fx-background-radius: 10;" text="0" textFill="WHITE">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </padding>
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect>
+                              </Button>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="240.0" prefWidth="80.0">
+                           <children>
+                              <Button fx:id="btnNumber8" mnemonicParsing="false" onAction="#number8" prefHeight="62.5" prefWidth="80.0" style="-fx-background-color: #708090; -fx-background-radius: 10;" text="8" textFill="WHITE">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </padding>
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect>
+                              </Button>
+                              <Button fx:id="btnNumber5" mnemonicParsing="false" onAction="#number5" prefHeight="62.5" prefWidth="80.0" style="-fx-background-color: #708090; -fx-background-radius: 10;" text="5" textFill="WHITE">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </padding>
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect>
+                              </Button>
+                              <Button fx:id="btnNumber2" mnemonicParsing="false" onAction="#number2" prefHeight="62.5" prefWidth="80.0" style="-fx-background-color: #708090; -fx-background-radius: 10;" text="2" textFill="WHITE">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </padding>
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect>
+                              </Button>
+                              <Button fx:id="btnMin" mnemonicParsing="false" onAction="#min" prefHeight="62.5" prefWidth="80.0" style="-fx-background-color: #708090;" text="-" textFill="WHITE">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </padding>
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect>
+                              </Button>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="240.0" prefWidth="80.0">
+                           <children>
+                              <Button fx:id="btnNumber9" mnemonicParsing="false" onAction="#number9" prefHeight="62.5" prefWidth="80.0" style="-fx-background-color: #708090; -fx-background-radius: 10;" text="9" textFill="WHITE">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </padding>
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect>
+                              </Button>
+                              <Button fx:id="btnNumber6" mnemonicParsing="false" onAction="#number6" prefHeight="62.5" prefWidth="80.0" style="-fx-background-color: #708090; -fx-background-radius: 10;" text="6" textFill="WHITE">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </padding>
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect>
+                              </Button>
+                              <Button fx:id="btnNumber3" mnemonicParsing="false" onAction="#number3" prefHeight="62.5" prefWidth="80.0" style="-fx-background-color: #708090; -fx-background-radius: 10;" text="3" textFill="WHITE">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </padding>
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect>
+                              </Button>
+                              <Button fx:id="btnSum" mnemonicParsing="false" onAction="#sum" prefHeight="62.5" prefWidth="80.0" style="-fx-background-color: #708090;" text="+" textFill="WHITE">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </padding>
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="658.0" prefWidth="515.0">
+         <children>
+            <TabPane layoutX="46.0" layoutY="96.0" prefHeight="419.0" prefWidth="528.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="239.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <tabs>
+                <Tab text="               COFFEE               ">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="417.0" prefWidth="528.0" style="-fx-background-color: #778899;">
+                           <children>
+                              <Button fx:id="btnCoffee2" layoutX="175.0" layoutY="14.0" mnemonicParsing="false" onAction="#coffee2" prefHeight="80.0" prefWidth="160.0" style="-fx-font-family: NanumGothicExtraBold;" text="+" AnchorPane.leftAnchor="175.0">
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect></Button>
+                              <Button fx:id="btnCoffee3" layoutX="358.0" layoutY="14.0" mnemonicParsing="false" onAction="#coffee3" prefHeight="80.0" prefWidth="160.0" style="-fx-font-family: NanumGothicExtraBold;" text="+" AnchorPane.leftAnchor="343.0">
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect></Button>
+                              <Button fx:id="btnCoffee5" layoutX="186.0" layoutY="104.0" mnemonicParsing="false" onAction="#coffee5" prefHeight="80.0" prefWidth="160.0" style="-fx-font-family: NanumGothicExtraBold;" text="+" AnchorPane.leftAnchor="175.0">
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect></Button>
+                              <Button fx:id="btnCoffee1" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#coffee1" prefHeight="80.0" prefWidth="160.0" style="-fx-font-family: NanumGothicExtraBold;" text="+" AnchorPane.leftAnchor="7.0">
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect></Button>
+                              <Button fx:id="btnCoffee4" layoutX="14.0" layoutY="104.0" mnemonicParsing="false" onAction="#coffee4" prefHeight="80.0" prefWidth="160.0" style="-fx-font-family: NanumGothicExtraBold;" text="+" AnchorPane.leftAnchor="7.0">
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect></Button>
+                              <Button fx:id="btnCoffee6" layoutX="358.0" layoutY="104.0" mnemonicParsing="false" onAction="#coffee6" prefHeight="80.0" prefWidth="160.0" style="-fx-font-family: NanumGothicExtraBold;" text="+" AnchorPane.leftAnchor="343.0">
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect></Button>
+                              <Button fx:id="btnCoffee7" layoutX="14.0" layoutY="194.0" mnemonicParsing="false" onAction="#coffee7" prefHeight="80.0" prefWidth="160.0" style="-fx-font-family: NanumGothicExtraBold;" text="+" AnchorPane.leftAnchor="7.0">
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect></Button>
+                              <Button fx:id="btnCoffee10" layoutX="7.0" layoutY="285.0" mnemonicParsing="false" onAction="#coffee10" prefHeight="80.0" prefWidth="160.0" text="+">
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect></Button>
+                              <Button fx:id="btnCoffee9" layoutX="340.0" layoutY="194.0" mnemonicParsing="false" onAction="#coffee9" prefHeight="80.0" prefWidth="160.0" text="+" AnchorPane.leftAnchor="343.0">
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect></Button>
+                              <Button fx:id="btnCoffee8" layoutX="175.0" layoutY="194.0" mnemonicParsing="false" onAction="#coffee8" prefHeight="80.0" prefWidth="160.0" text="+">
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect></Button>
+                              <Button fx:id="btnCoffee12" layoutX="340.0" layoutY="285.0" mnemonicParsing="false" onAction="#coffee12" prefHeight="80.0" prefWidth="160.0" text="+" AnchorPane.leftAnchor="343.0">
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect></Button>
+                              <Button fx:id="btnCoffee11" layoutX="175.0" layoutY="285.0" mnemonicParsing="false" onAction="#coffee11" prefHeight="80.0" prefWidth="160.0" text="+">
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect></Button>
+                           </children>
+                           <effect>
+                              <InnerShadow />
+                           </effect>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="               DRINK               ">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="480.0" prefWidth="528.0" style="-fx-background-color: #778899;">
+                           <children>
+                              <Button fx:id="btnDrink1" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#drink1" prefHeight="80.0" prefWidth="160.0" text="+" AnchorPane.leftAnchor="7.0">
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect></Button>
+                              <Button fx:id="btnDrink2" layoutX="186.0" layoutY="14.0" mnemonicParsing="false" onAction="#drink2" prefHeight="80.0" prefWidth="160.0" text="+" AnchorPane.leftAnchor="175.0">
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect></Button>
+                              <Button fx:id="btnDrink4" layoutX="14.0" layoutY="109.0" mnemonicParsing="false" onAction="#drink4" prefHeight="80.0" prefWidth="160.0" text="+" AnchorPane.leftAnchor="7.0">
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect></Button>
+                              <Button fx:id="btnDrink3" layoutX="358.0" layoutY="14.0" mnemonicParsing="false" onAction="#drink3" prefHeight="80.0" prefWidth="160.0" text="+" AnchorPane.leftAnchor="343.0">
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect></Button>
+                              <Button fx:id="btnDrink5" layoutX="186.0" layoutY="109.0" mnemonicParsing="false" onAction="#drink5" prefHeight="80.0" prefWidth="160.0" text="+" AnchorPane.leftAnchor="175.0">
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect></Button>
+                              <Button fx:id="btnDrink7" layoutX="14.0" layoutY="203.0" mnemonicParsing="false" onAction="#drink7" prefHeight="80.0" prefWidth="160.0" text="+" AnchorPane.leftAnchor="7.0">
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect></Button>
+                              <Button fx:id="btnDrink6" layoutX="358.0" layoutY="109.0" mnemonicParsing="false" onAction="#drink6" prefHeight="80.0" prefWidth="160.0" text="+" AnchorPane.leftAnchor="343.0">
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect></Button>
+                              <Button fx:id="btnDrink8" layoutX="186.0" layoutY="203.0" mnemonicParsing="false" onAction="#drink8" prefHeight="80.0" prefWidth="160.0" text="+" AnchorPane.leftAnchor="175.0">
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect></Button>
+                              <Button fx:id="btnDrink9" layoutX="358.0" layoutY="203.0" mnemonicParsing="false" onAction="#drink9" prefHeight="80.0" prefWidth="160.0" text="+" AnchorPane.leftAnchor="343.0">
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect></Button>
+                              <Button fx:id="btnDrink12" layoutX="358.0" layoutY="292.0" mnemonicParsing="false" onAction="#drink12" prefHeight="80.0" prefWidth="160.0" text="+" AnchorPane.leftAnchor="343.0">
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect></Button>
+                              <Button fx:id="btnDrink11" layoutX="192.0" layoutY="292.0" mnemonicParsing="false" onAction="#drink11" prefHeight="80.0" prefWidth="160.0" text="+" AnchorPane.leftAnchor="175.0">
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect></Button>
+                              <Button fx:id="btnDrink10" layoutX="14.0" layoutY="292.0" mnemonicParsing="false" onAction="#drink10" prefHeight="80.0" prefWidth="160.0" text="+" AnchorPane.leftAnchor="7.0">
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect></Button>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab text="               DESSERT               ">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="631.0" prefWidth="528.0" style="-fx-background-color: #778899;">
+                           <children>
+                              <Button fx:id="btnDessert1" layoutX="7.0" layoutY="14.0" mnemonicParsing="false" onAction="#dessert1" prefHeight="80.0" prefWidth="160.0" text="+" AnchorPane.leftAnchor="7.0">
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect></Button>
+                              <Button fx:id="btnDessert2" layoutX="175.0" layoutY="14.0" mnemonicParsing="false" onAction="#dessert2" prefHeight="80.0" prefWidth="160.0" text="+" AnchorPane.leftAnchor="175.0">
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect></Button>
+                              <Button fx:id="btnDessert7" layoutX="14.0" layoutY="199.0" mnemonicParsing="false" onAction="#dessert7" prefHeight="80.0" prefWidth="160.0" text="+" AnchorPane.leftAnchor="7.0">
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect></Button>
+                              <Button fx:id="btnDessert6" layoutX="343.0" layoutY="107.0" mnemonicParsing="false" onAction="#dessert6" prefHeight="80.0" prefWidth="160.0" text="+" AnchorPane.leftAnchor="343.0">
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect></Button>
+                              <Button fx:id="btnDessert5" layoutX="186.0" layoutY="107.0" mnemonicParsing="false" onAction="#dessert5" prefHeight="80.0" prefWidth="160.0" text="+" AnchorPane.leftAnchor="175.0">
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect></Button>
+                              <Button fx:id="btnDessert4" layoutX="14.0" layoutY="107.0" mnemonicParsing="false" onAction="#dessert4" prefHeight="80.0" prefWidth="160.0" text="+" AnchorPane.leftAnchor="7.0">
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect></Button>
+                              <Button fx:id="btnDessert3" layoutX="343.0" layoutY="14.0" mnemonicParsing="false" onAction="#dessert3" prefHeight="80.0" prefWidth="160.0" text="+" AnchorPane.leftAnchor="343.0">
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect></Button>
+                              <Button fx:id="btnDessert9" layoutX="354.0" layoutY="199.0" mnemonicParsing="false" onAction="#dessert9" prefHeight="80.0" prefWidth="160.0" text="+" AnchorPane.leftAnchor="343.0">
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect></Button>
+                              <Button fx:id="btnDessert8" layoutX="186.0" layoutY="199.0" mnemonicParsing="false" onAction="#dessert8" prefHeight="80.0" prefWidth="160.0" text="+" AnchorPane.leftAnchor="175.0">
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect></Button>
+                              <Button fx:id="btnDessert12" layoutX="354.0" layoutY="291.0" mnemonicParsing="false" onAction="#dessert12" prefHeight="80.0" prefWidth="160.0" text="+" AnchorPane.leftAnchor="343.0">
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect></Button>
+                              <Button fx:id="btnDessert11" layoutX="186.0" layoutY="291.0" mnemonicParsing="false" onAction="#dessert11" prefHeight="80.0" prefWidth="160.0" text="+" AnchorPane.leftAnchor="175.0">
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect></Button>
+                              <Button fx:id="btnDessert10" layoutX="26.0" layoutY="291.0" mnemonicParsing="false" onAction="#dessert10" prefHeight="80.0" prefWidth="160.0" text="+" AnchorPane.leftAnchor="7.0">
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect></Button>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+            <JFXButton fx:id="btnCash" layoutX="9.0" layoutY="532.0" onAction="#cash" prefHeight="86.0" prefWidth="151.0" ripplerFill="BLACK" style="-fx-background-color: #778899;" text="현금결제" textFill="WHITE">
+               <effect>
+                  <InnerShadow color="#0b0d17" height="0.0" radius="4.6875" width="20.75" />
+               </effect>
+            </JFXButton>
+            <JFXButton fx:id="btnCard" layoutX="177.0" layoutY="532.0" onAction="#card" prefHeight="86.0" prefWidth="151.0" style="-fx-background-color: #778899;" text="카드결제" textFill="WHITE">
+               <effect>
+                  <InnerShadow color="#0b0d17" height="0.0" radius="4.6875" width="20.75" />
+               </effect>
+            </JFXButton>
+            <JFXButton fx:id="btnSaleList" layoutX="345.0" layoutY="513.0" onAction="#saleList" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #778899;" text="판매현황" textFill="WHITE">
+               <effect>
+                  <InnerShadow color="#0b0d17" height="0.0" radius="4.6875" width="20.75" />
+               </effect>
+            </JFXButton>
+            <JFXButton fx:id="btnUpdate" layoutX="345.0" layoutY="458.0" onAction="#update" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #778899;" text="상품정보 수정" textFill="WHITE">
+               <effect>
+                  <InnerShadow color="#0b0d17" height="0.0" radius="4.6875" width="20.75" />
+               </effect>
+            </JFXButton>
+            <JFXButton fx:id="btnClose" layoutX="345.0" layoutY="568.0" onAction="#close" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #778899;" text="종료" textFill="WHITE">
+               <effect>
+                  <InnerShadow color="#0b0d17" height="0.0" radius="4.6875" width="20.75" />
+               </effect>
+            </JFXButton>
+            <JFXButton fx:id="btnRefresh" layoutX="9.0" layoutY="458.0" onAction="#refresh" prefHeight="67.0" prefWidth="319.0" style="-fx-background-color: #778899;" text="새로고침" textFill="WHITE">
+               <effect>
+                  <InnerShadow color="#0b0d17" height="0.0" radius="4.6875" width="20.75" />
+               </effect>
+            </JFXButton>
+         </children></AnchorPane>
+  </items>
+</SplitPane>
